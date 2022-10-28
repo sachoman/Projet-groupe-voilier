@@ -1,7 +1,7 @@
 #include "stm32f10x.h"
 #include "adc.h"
 
-int valeur_ADC;
+static int valeur_ADC;
 
 void ADC_init_single(MyADC_Struct_TypeDef * adc){
 	RCC->CFGR |= RCC_CFGR_ADCPRE_DIV6; //clock 12MHz
@@ -33,6 +33,9 @@ void ADC_on (MyADC_Struct_TypeDef * adc){
     return adc->ADC->DR & ~((0x0F) << 12); //les 12 bits qui nous intéressent
 	}
 	
+	int get_adcValue(){
+		return valeur_ADC;
+	}
 	void ADC1_2_IRQHandler (void){
 		ADC1->SR &= ~ADC_SR_EOC; 
 		//ADC2->SR &= ~ADC_SR_EOC;

@@ -26,6 +26,8 @@ typedef struct
 	//just set the "ADON" bit again 
 	int ADC_Read(MyADC_Struct_TypeDef * adc);
 	
+
+int get_adcValue(void);
 	//ADC CLOCK : 
 	/*La documentation nous apprend que l'horloge de l'ADC doit avoir une 
 			fréquence inférieure à 14 MHz pour que le périphérique fonctionne. 
