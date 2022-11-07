@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include;..\..\Drivers</IncludePath>
+              <IncludePath>.\Include;..\..\Drivers;..\Rotation-plateau\Sources</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -384,14 +384,14 @@
           <GroupName>Sources</GroupName>
           <Files>
             <File>
-              <FileName>rotation-plateau.c</FileName>
+              <FileName>gestion-plateau.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Sources\rotation-plateau.c</FilePath>
+              <FilePath>.\Sources\gestion-plateau.c</FilePath>
             </File>
             <File>
-              <FileName>rotation-plateau.h</FileName>
+              <FileName>gestion-plateau.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Sources\rotation-plateau.h</FilePath>
+              <FilePath>.\Sources\gestion-plateau.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -417,6 +417,26 @@
               <FileName>Timer.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Drivers\Timer.h</FilePath>
+            </File>
+            <File>
+              <FileName>rotation-plateau.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Rotation-plateau\Sources\rotation-plateau.c</FilePath>
+            </File>
+            <File>
+              <FileName>rotation-plateau.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Rotation-plateau\Sources\rotation-plateau.h</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Drivers\usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Drivers\usart.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -806,14 +826,14 @@
           <GroupName>Sources</GroupName>
           <Files>
             <File>
-              <FileName>rotation-plateau.c</FileName>
+              <FileName>gestion-plateau.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Sources\rotation-plateau.c</FilePath>
+              <FilePath>.\Sources\gestion-plateau.c</FilePath>
             </File>
             <File>
-              <FileName>rotation-plateau.h</FileName>
+              <FileName>gestion-plateau.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Sources\rotation-plateau.h</FilePath>
+              <FilePath>.\Sources\gestion-plateau.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -839,6 +859,26 @@
               <FileName>Timer.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Drivers\Timer.h</FilePath>
+            </File>
+            <File>
+              <FileName>rotation-plateau.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Rotation-plateau\Sources\rotation-plateau.c</FilePath>
+            </File>
+            <File>
+              <FileName>rotation-plateau.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Rotation-plateau\Sources\rotation-plateau.h</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Drivers\usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Drivers\usart.h</FilePath>
             </File>
           </Files>
         </Group>
