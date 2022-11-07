@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'usart-dev' 
+ * Project: 'rotation-plateau' 
  * Target:  'Reel' 
  */
 

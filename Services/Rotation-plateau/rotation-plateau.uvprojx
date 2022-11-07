@@ -384,9 +384,14 @@
           <GroupName>Sources</GroupName>
           <Files>
             <File>
-              <FileName>principal.c</FileName>
+              <FileName>rotation-plateau.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Sources\principal.c</FilePath>
+              <FilePath>.\Sources\rotation-plateau.c</FilePath>
+            </File>
+            <File>
+              <FileName>rotation-plateau.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Sources\rotation-plateau.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -404,19 +409,9 @@
               <FilePath>..\..\Drivers\Timer.c</FilePath>
             </File>
             <File>
-              <FileName>usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Drivers\usart.c</FilePath>
-            </File>
-            <File>
               <FileName>Driver_GPIO.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Drivers\Driver_GPIO.h</FilePath>
-            </File>
-            <File>
-              <FileName>usart.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Drivers\usart.h</FilePath>
             </File>
             <File>
               <FileName>Timer.h</FileName>
@@ -476,7 +471,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>led_reel</OutputName>
+          <OutputName>rotation_plateau_reel</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -811,9 +806,14 @@
           <GroupName>Sources</GroupName>
           <Files>
             <File>
-              <FileName>principal.c</FileName>
+              <FileName>rotation-plateau.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Sources\principal.c</FilePath>
+              <FilePath>.\Sources\rotation-plateau.c</FilePath>
+            </File>
+            <File>
+              <FileName>rotation-plateau.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Sources\rotation-plateau.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -831,19 +831,9 @@
               <FilePath>..\..\Drivers\Timer.c</FilePath>
             </File>
             <File>
-              <FileName>usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Drivers\usart.c</FilePath>
-            </File>
-            <File>
               <FileName>Driver_GPIO.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Drivers\Driver_GPIO.h</FilePath>
-            </File>
-            <File>
-              <FileName>usart.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Drivers\usart.h</FilePath>
             </File>
             <File>
               <FileName>Timer.h</FileName>
