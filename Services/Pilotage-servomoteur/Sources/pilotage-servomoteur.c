@@ -19,13 +19,13 @@ void initServo(void){
 	Servo_Struct_TIM.PSC = Servo_PSC;
 	MyTimer_Base_Init (&Servo_Struct_TIM);
 	MyTimer_PWM (Servo_Timer, Servo_tim_channel );
-	Cycle_PWM (Servo_Timer, 50, Servo_tim_channel);
+	Cycle_PWM (Servo_Timer, 5 , Servo_tim_channel);
 	MyTimer_Base_Start(Servo_Timer);
 }
-/*
+
 int main(void){
 	initServo();
 	while (1){
 	}
 }
-*/
+

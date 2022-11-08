@@ -28,9 +28,10 @@ Project File Date:  11/08/2022
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'Simule'
 assembling startup_stm32f10x_md.s...
-compiling rotation-plateau.c...
-compiling system_stm32f10x.c...
 compiling Driver_GPIO.c...
+compiling Timer.c...
+compiling system_stm32f10x.c...
+compiling rotation-plateau.c...
 compiling pilotage-servomoteur.c...
 ..\..\Drivers\usart.h(10): warning:  #1295-D: Deprecated declaration usart_configure_1_9600bps - give arg types
   void usart_configure_1_9600bps();
@@ -39,9 +40,8 @@ compiling usart.c...
 ..\..\Drivers\usart.h(10): warning:  #1295-D: Deprecated declaration usart_configure_1_9600bps - give arg types
   void usart_configure_1_9600bps();
 ..\..\Drivers\usart.c: 1 warning, 0 errors
-compiling Timer.c...
 linking...
-Program Size: Code=1332 RO-data=268 RW-data=64 ZI-data=1024  
+Program Size: Code=1332 RO-data=268 RW-data=72 ZI-data=1024  
 ".\Objects\led_simule.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -69,11 +69,11 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\system_stm32f10x.c
       Include file:  RTE_Driver\Config\RTE_Device.h
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\startup_stm32f10x_md.s
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
