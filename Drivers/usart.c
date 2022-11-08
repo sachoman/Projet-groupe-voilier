@@ -9,13 +9,14 @@ void (* usart_ptr) (void);
 //registre USART1 Rx= PA10
 //Usart1 TX = PA9
 
-MyGPIO_Struct_TypeDef Usart_gpio;
+MyGPIO_Struct_TypeDef Usart_gpio_tx;
+MyGPIO_Struct_TypeDef Usart_gpio_rx;
 MyTimer_Struct_TypeDef Usart_tim4;
 
 char usart_buffer[UsartBufferSize];
 int usart_buffer_index=0;
 
-void usart_configure_1_9600bps(){
+void usart_configure_1_9600bps(void){
     RCC->APB2ENR |= RCC_APB2ENR_USART1EN; // Validation horloge
     USART1->CR1 |= USART_CR1_UE; // Activation
 		USART1->CR1 |= USART_CR1_RE;
@@ -24,10 +25,15 @@ void usart_configure_1_9600bps(){
     USART1->BRR |= 468 << 4; // Mantisse register à 468 -> 9600 baud rate
     USART1->BRR |= 75; // Fraction register à 75 -> 9600 baud rate
     USART1->CR1 |= USART_CR1_TE; // Transmitter enable
-		Usart_gpio.GPIO= GPIOA;
-		Usart_gpio.GPIO_Conf=AltOut_Ppull;
-		Usart_gpio.GPIO_Pin=9;
-		MyGPIO_Init(&Usart_gpio);
+		Usart_gpio_tx.GPIO= GPIOA;
+		Usart_gpio_tx.GPIO_Conf=AltOut_Ppull;
+		Usart_gpio_tx.GPIO_Pin=9;
+	Usart_gpio_rx.GPIO= GPIOA;
+		Usart_gpio_rx.GPIO_Conf=In_Floating;
+		Usart_gpio_rx.GPIO_Pin=10;
+		MyGPIO_Init(&Usart_gpio_rx);
+	
+	MyGPIO_Init(&Usart_gpio_tx);
 }
 
 void usart_1_send(char data){
@@ -35,7 +41,7 @@ void usart_1_send(char data){
     while(!(USART1->SR & USART_SR_TXE)) {} // Attente si data register empty
 }
 
-void USART1_IRQHandler(){
+void USART1_IRQHandler(void){
 	Data=USART1->DR;
 	usart_ptr();
 }
