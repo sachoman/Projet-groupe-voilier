@@ -9,6 +9,7 @@
 
 void usart_configure_1_9600bps();
 void usart_1_send(char data);
+void usart_1_send_string(char * stringdata, int length);
 void usart_1_configure_IT(void (*fun) (void), char prio);
 char usart_getValue(void);
 #endif

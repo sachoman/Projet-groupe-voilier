@@ -4,7 +4,8 @@
 #include "Driver_GPIO.h"
 
 
-static char Data;
+static char usart_Data;
+int usart_i;
 void (* usart_ptr) (void);
 //registre USART1 Rx= PA10
 //Usart1 TX = PA9
@@ -34,15 +35,19 @@ void usart_1_send(char data){
     USART1->DR |= data; // Ecriture de la donnée dans DR
     while(!(USART1->SR & USART_SR_TXE)) {} // Attente si data register empty
 }
-
+void usart_1_send_string(char * data, int length){
+	for (usart_i=0; usart_i<length; usart_i++){
+		usart_1_send(data[usart_i]);
+	}
+}
 void USART1_IRQHandler(){
-	Data=USART1->DR;
+	usart_Data=USART1->DR;
 	usart_ptr();
 }
 
 char usart_getValue(void)
 {
-	return Data;
+	return usart_Data;
 }
 
 void usart_1_configure_IT(void (*fun) (void), char prio){
