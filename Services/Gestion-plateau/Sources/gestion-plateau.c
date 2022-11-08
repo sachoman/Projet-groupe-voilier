@@ -23,9 +23,10 @@ void initGestionPlateau(){
 	usart_1_configure_IT(receptionDonnees, 2);
 	initPlateau();
 }
-
+/*
 int main(void){
 	initGestionPlateau();
 	while (1){
 	}
 }
+*/
