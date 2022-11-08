@@ -1,7 +1,7 @@
 #ifndef GIROUETTE_H
 #define GIROUETTE_H
 #include "stm32f10x.h"
-#include "timers.h"
+#include "Timer.h"
 
 //ici on utilise les gpio 
 /*
