@@ -22,8 +22,10 @@ void initServo(void){
 	Cycle_PWM (Servo_Timer, 50, Servo_tim_channel);
 	MyTimer_Base_Start(Servo_Timer);
 }
+/*
 int main(void){
 	initServo();
 	while (1){
 	}
 }
+*/
