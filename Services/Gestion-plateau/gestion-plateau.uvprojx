@@ -781,7 +781,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include;..\..\Drivers</IncludePath>
+              <IncludePath>.\Include;..\..\Drivers;..\Rotation-plateau\Sources</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

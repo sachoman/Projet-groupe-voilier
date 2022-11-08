@@ -10,11 +10,11 @@ void receptionDonnees(){
 	g_p_i= (int)g_p_c;
 	if (g_p_i > 128){
 		//droite
-		g_p_i = g_p_i -128;
-		tourneDroite(g_p_i/100);
+		g_p_i = (256 - g_p_i);
+		tourneDroite(g_p_i);
 	}
 	else{
-		tourneGauche(g_p_i/100);
+		tourneGauche(g_p_i);
 	}
 }
 

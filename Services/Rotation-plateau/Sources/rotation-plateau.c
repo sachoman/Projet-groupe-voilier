@@ -40,7 +40,6 @@ void tourneDroite(int alpha){
 int main(void){
 	initPlateau();
 	while(1){
-		tourneGauche(50);
 	}
 }
 */
