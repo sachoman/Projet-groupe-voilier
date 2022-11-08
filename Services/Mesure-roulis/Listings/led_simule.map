@@ -24,7 +24,7 @@ Section Cross References
     usart.o(i.USART1_IRQHandler) refers to usart.o(.data) for Data
     usart.o(i.usart_1_configure_IT) refers to usart.o(.data) for usart_ptr
     usart.o(i.usart_configure_1_9600bps) refers to driver_gpio.o(i.MyGPIO_Init) for MyGPIO_Init
-    usart.o(i.usart_configure_1_9600bps) refers to usart.o(.data) for Usart_gpio
+    usart.o(i.usart_configure_1_9600bps) refers to usart.o(.data) for Usart_gpio_tx
     usart.o(i.usart_getValue) refers to usart.o(.data) for Data
     startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
     startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
@@ -63,6 +63,8 @@ Removing Unused input sections from the image.
     Removing mesure-roulis.o(.rev16_text), (4 bytes).
     Removing mesure-roulis.o(.revsh_text), (4 bytes).
     Removing mesure-roulis.o(.rrx_text), (6 bytes).
+    Removing mesure-roulis.o(i.initMesureRoulis), (2 bytes).
+    Removing mesure-roulis.o(i.setupADXL345), (2 bytes).
     Removing driver_gpio.o(.rev16_text), (4 bytes).
     Removing driver_gpio.o(.revsh_text), (4 bytes).
     Removing driver_gpio.o(.rrx_text), (6 bytes).
@@ -93,7 +95,7 @@ Removing Unused input sections from the image.
     Removing usart.o(.rrx_text), (6 bytes).
     Removing usart.o(i.usart_1_configure_IT), (112 bytes).
     Removing usart.o(i.usart_1_send), (32 bytes).
-    Removing usart.o(i.usart_configure_1_9600bps), (132 bytes).
+    Removing usart.o(i.usart_configure_1_9600bps), (156 bytes).
     Removing usart.o(i.usart_getValue), (12 bytes).
     Removing usart.o(.bss), (10 bytes).
     Removing startup_stm32f10x_md.o(HEAP), (512 bytes).
@@ -103,7 +105,7 @@ Removing Unused input sections from the image.
     Removing system_stm32f10x.o(i.SystemCoreClockUpdate), (164 bytes).
     Removing system_stm32f10x.o(.data), (20 bytes).
 
-42 unused section(s) (total 2168 bytes) removed from the image.
+44 unused section(s) (total 2196 bytes) removed from the image.
 
 ==============================================================================
 
@@ -173,9 +175,9 @@ Image Symbol Table
     i.__scatterload_zeroinit                 0x08000344   Section       14  handlers.o(i.__scatterload_zeroinit)
     i.main                                   0x08000352   Section        0  mesure-roulis.o(i.main)
     .data                                    0x20000000   Section       16  timer.o(.data)
-    .data                                    0x20000010   Section       28  usart.o(.data)
+    .data                                    0x20000010   Section       36  usart.o(.data)
     Data                                     0x20000010   Data           1  usart.o(.data)
-    STACK                                    0x20000030   Section     1024  startup_stm32f10x_md.o(STACK)
+    STACK                                    0x20000038   Section     1024  startup_stm32f10x_md.o(STACK)
 
     Global Symbols
 
@@ -269,10 +271,11 @@ Image Symbol Table
     ptr3                                     0x20000008   Data           4  timer.o(.data)
     ptr4                                     0x2000000c   Data           4  timer.o(.data)
     usart_ptr                                0x20000014   Data           4  usart.o(.data)
-    Usart_gpio                               0x20000018   Data           8  usart.o(.data)
-    Usart_tim4                               0x20000020   Data           8  usart.o(.data)
-    usart_buffer_index                       0x20000028   Data           4  usart.o(.data)
-    __initial_sp                             0x20000430   Data           0  startup_stm32f10x_md.o(STACK)
+    Usart_gpio_tx                            0x20000018   Data           8  usart.o(.data)
+    Usart_gpio_rx                            0x20000020   Data           8  usart.o(.data)
+    Usart_tim4                               0x20000028   Data           8  usart.o(.data)
+    usart_buffer_index                       0x20000030   Data           4  usart.o(.data)
+    __initial_sp                             0x20000438   Data           0  startup_stm32f10x_md.o(STACK)
 
 
 
@@ -282,55 +285,55 @@ Memory Map of the image
 
   Image Entry point : 0x08000105
 
-  Load Region LR_1 (Base: 0x08000000, Size: 0x000003a4, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x08000000, Size: 0x000003ac, Max: 0xffffffff, ABSOLUTE)
 
     Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000378, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000000ec   Data   RO          306    RESET               startup_stm32f10x_md.o
-    0x080000ec   0x080000ec   0x00000000   Code   RO          357  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080000ec   0x080000ec   0x00000004   Code   RO          360    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080000f0   0x080000f0   0x00000004   Code   RO          363    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO          365    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO          367    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080000f4   0x080000f4   0x00000008   Code   RO          368    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080000fc   0x080000fc   0x00000004   Code   RO          375    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x08000100   0x08000100   0x00000000   Code   RO          370    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x08000100   0x08000100   0x00000000   Code   RO          372    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x08000100   0x08000100   0x00000004   Code   RO          361    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08000104   0x08000104   0x00000024   Code   RO          307  * .text               startup_stm32f10x_md.o
-    0x08000128   0x08000128   0x00000024   Code   RO          376    .text               mc_w.l(init.o)
-    0x0800014c   0x0800014c   0x00000008   Code   RO          314    i.SetSysClock       system_stm32f10x.o
-    0x08000154   0x08000154   0x000000e0   Code   RO          315    i.SetSysClockTo72   system_stm32f10x.o
-    0x08000234   0x08000234   0x00000060   Code   RO          317    i.SystemInit        system_stm32f10x.o
-    0x08000294   0x08000294   0x00000020   Code   RO          127    i.TIM1_UP_IRQHandler  timer.o
-    0x080002b4   0x080002b4   0x00000020   Code   RO          128    i.TIM2_IRQHandler   timer.o
-    0x080002d4   0x080002d4   0x00000020   Code   RO          129    i.TIM3_IRQHandler   timer.o
-    0x080002f4   0x080002f4   0x00000020   Code   RO          130    i.TIM4_IRQHandler   timer.o
-    0x08000314   0x08000314   0x00000020   Code   RO          251    i.USART1_IRQHandler  usart.o
-    0x08000334   0x08000334   0x0000000e   Code   RO          380    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08000342   0x08000342   0x00000002   Code   RO          381    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08000344   0x08000344   0x0000000e   Code   RO          382    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08000352   0x08000352   0x00000004   Code   RO            4    i.main              mesure-roulis.o
+    0x08000000   0x08000000   0x000000ec   Data   RO          321    RESET               startup_stm32f10x_md.o
+    0x080000ec   0x080000ec   0x00000000   Code   RO          372  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x080000ec   0x00000004   Code   RO          375    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x080000f0   0x00000004   Code   RO          378    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          380    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          382    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x080000f4   0x00000008   Code   RO          383    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x080000fc   0x00000004   Code   RO          390    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x08000100   0x08000100   0x00000000   Code   RO          385    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x08000100   0x08000100   0x00000000   Code   RO          387    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x08000100   0x08000100   0x00000004   Code   RO          376    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000104   0x08000104   0x00000024   Code   RO          322  * .text               startup_stm32f10x_md.o
+    0x08000128   0x08000128   0x00000024   Code   RO          391    .text               mc_w.l(init.o)
+    0x0800014c   0x0800014c   0x00000008   Code   RO          329    i.SetSysClock       system_stm32f10x.o
+    0x08000154   0x08000154   0x000000e0   Code   RO          330    i.SetSysClockTo72   system_stm32f10x.o
+    0x08000234   0x08000234   0x00000060   Code   RO          332    i.SystemInit        system_stm32f10x.o
+    0x08000294   0x08000294   0x00000020   Code   RO          142    i.TIM1_UP_IRQHandler  timer.o
+    0x080002b4   0x080002b4   0x00000020   Code   RO          143    i.TIM2_IRQHandler   timer.o
+    0x080002d4   0x080002d4   0x00000020   Code   RO          144    i.TIM3_IRQHandler   timer.o
+    0x080002f4   0x080002f4   0x00000020   Code   RO          145    i.TIM4_IRQHandler   timer.o
+    0x08000314   0x08000314   0x00000020   Code   RO          266    i.USART1_IRQHandler  usart.o
+    0x08000334   0x08000334   0x0000000e   Code   RO          395    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08000342   0x08000342   0x00000002   Code   RO          396    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08000344   0x08000344   0x0000000e   Code   RO          397    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08000352   0x08000352   0x00000004   Code   RO            5    i.main              mesure-roulis.o
     0x08000356   0x08000356   0x00000002   PAD
-    0x08000358   0x08000358   0x00000020   Data   RO          378    Region$$Table       anon$$obj.o
+    0x08000358   0x08000358   0x00000020   Data   RO          393    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000378, Size: 0x0000002c, Max: 0xffffffff, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x20000000   0x08000378   0x00000010   Data   RW          133    .data               timer.o
-    0x20000010   0x08000388   0x0000001c   Data   RW          257    .data               usart.o
-
-
-    Execution Region ER_ZI (Exec base: 0x2000002c, Load base: 0x080003a4, Size: 0x00000404, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000378, Size: 0x00000034, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x2000002c   0x080003a4   0x00000004   PAD
-    0x20000030        -       0x00000400   Zero   RW          304    STACK               startup_stm32f10x_md.o
+    0x20000000   0x08000378   0x00000010   Data   RW          148    .data               timer.o
+    0x20000010   0x08000388   0x00000024   Data   RW          272    .data               usart.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000034, Load base: 0x080003ac, Size: 0x00000404, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000034   0x080003ac   0x00000004   PAD
+    0x20000038        -       0x00000400   Zero   RW          319    STACK               startup_stm32f10x_md.o
 
 
 ==============================================================================
@@ -345,10 +348,10 @@ Image component sizes
         36          8        236          0       1024        824   startup_stm32f10x_md.o
        328         28          0          0          0       2037   system_stm32f10x.o
        128         36          0         16          0       2549   timer.o
-        32         14          0         28          0       1330   usart.o
+        32         14          0         36          0       1379   usart.o
 
     ----------------------------------------------------------------------
-       530         86        268         44       1028     214679   Object Totals
+       530         86        268         52       1028     214728   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          2          0          0          0          4          0   (incl. Padding)
 
@@ -388,15 +391,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-       620        102        268         44       1028     214535   Grand Totals
-       620        102        268         44       1028     214535   ELF Image Totals
-       620        102        268         44          0          0   ROM Totals
+       620        102        268         52       1028     214584   Grand Totals
+       620        102        268         52       1028     214584   ELF Image Totals
+       620        102        268         52          0          0   ROM Totals
 
 ==============================================================================
 
     Total RO  Size (Code + RO Data)                  888 (   0.87kB)
-    Total RW  Size (RW Data + ZI Data)              1072 (   1.05kB)
-    Total ROM Size (Code + RO Data + RW Data)        932 (   0.91kB)
+    Total RW  Size (RW Data + ZI Data)              1080 (   1.05kB)
+    Total ROM Size (Code + RO Data + RW Data)        940 (   0.92kB)
 
 ==============================================================================
 
