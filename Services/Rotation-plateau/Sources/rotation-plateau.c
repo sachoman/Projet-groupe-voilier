@@ -25,6 +25,7 @@ void initPlateau(void){
 	MyTimer_Base_Init (&Rot_Struct_TIM);
 	MyTimer_PWM (Rot_Timer, Rot_tim_channel );
 	Cycle_PWM (Rot_Timer, 0, Rot_tim_channel);
+	MyTimer_Base_Start(Rot_Timer);
 }
 
 void tourneGauche(int alpha){
@@ -38,7 +39,6 @@ void tourneDroite(int alpha){
 /*
 int main(void){
 	initPlateau();
-	MyTimer_Base_Start(Rot_Timer);
 	while(1){
 		tourneGauche(50);
 	}
