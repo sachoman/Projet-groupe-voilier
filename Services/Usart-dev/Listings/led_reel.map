@@ -1,0 +1,70 @@
+Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
+
+==============================================================================
+
+Section Cross References
+
+    principal.o(i.main) refers to usart.o(i.configure_usart1_9600bps) for configure_usart1_9600bps
+    principal.o(i.main) refers to usart.o(i.send) for send
+    principal.o(i.main) refers to principal.o(.data) for c
+    driver_gpio.o(i.MyGPIO_Init) refers to driver_gpio.o(i.MyGPIO_Reset) for MyGPIO_Reset
+    driver_gpio.o(i.MyGPIO_Init) refers to driver_gpio.o(i.MyGPIO_Set) for MyGPIO_Set
+    driver_gpio.o(i.MyGPIO_Init) refers to driver_gpio.o(.data) for regcr
+    timer.o(i.MyTimer_ActiveIT) refers to timer.o(i.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    timer.o(i.MyTimer_ActiveIT) refers to timer.o(i.__NVIC_SetPriority) for __NVIC_SetPriority
+    timer.o(i.MyTimer_ActiveIT) refers to timer.o(.data) for ptr2
+    timer.o(i.MyTimer_ActiveIT) refers to timer_1.o(.data) for ptr2
+    timer.o(i.TIM1_UP_IRQHandler) refers to timer.o(.data) for ptr1
+    timer.o(i.TIM1_UP_IRQHandler) refers to timer_1.o(.data) for ptr1
+    timer.o(i.TIM2_IRQHandler) refers to timer.o(.data) for ptr2
+    timer.o(i.TIM2_IRQHandler) refers to timer_1.o(.data) for ptr2
+    timer.o(i.TIM3_IRQHandler) refers to timer.o(.data) for ptr3
+    timer.o(i.TIM3_IRQHandler) refers to timer_1.o(.data) for ptr3
+    timer.o(i.TIM4_IRQHandler) refers to timer.o(.data) for ptr4
+    timer.o(i.TIM4_IRQHandler) refers to timer_1.o(.data) for ptr4
+    usart.o(i.configure_usart1_9600bps) refers to driver_gpio.o(i.MyGPIO_Init) for MyGPIO_Init
+    usart.o(i.configure_usart1_9600bps) refers to usart.o(.data) for Usart_gpio
+    timer_1.o(i.MyTimer_ActiveIT) refers to timer_1.o(i.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    timer_1.o(i.MyTimer_ActiveIT) refers to timer_1.o(i.__NVIC_SetPriority) for __NVIC_SetPriority
+    timer_1.o(i.MyTimer_ActiveIT) refers to timer.o(.data) for ptr2
+    timer_1.o(i.MyTimer_ActiveIT) refers to timer_1.o(.data) for ptr2
+    timer_1.o(i.TIM1_UP_IRQHandler) refers to timer.o(.data) for ptr1
+    timer_1.o(i.TIM1_UP_IRQHandler) refers to timer_1.o(.data) for ptr1
+    timer_1.o(i.TIM2_IRQHandler) refers to timer.o(.data) for ptr2
+    timer_1.o(i.TIM2_IRQHandler) refers to timer_1.o(.data) for ptr2
+    timer_1.o(i.TIM3_IRQHandler) refers to timer.o(.data) for ptr3
+    timer_1.o(i.TIM3_IRQHandler) refers to timer_1.o(.data) for ptr3
+    timer_1.o(i.TIM4_IRQHandler) refers to timer.o(.data) for ptr4
+    timer_1.o(i.TIM4_IRQHandler) refers to timer_1.o(.data) for ptr4
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
+    startup_stm32f10x_md.o(RESET) refers to timer.o(i.TIM1_UP_IRQHandler) for TIM1_UP_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to timer_1.o(i.TIM1_UP_IRQHandler) for TIM1_UP_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to timer.o(i.TIM2_IRQHandler) for TIM2_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to timer_1.o(i.TIM2_IRQHandler) for TIM2_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to timer.o(i.TIM3_IRQHandler) for TIM3_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to timer_1.o(i.TIM3_IRQHandler) for TIM3_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to timer.o(i.TIM4_IRQHandler) for TIM4_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to timer_1.o(i.TIM4_IRQHandler) for TIM4_IRQHandler
+    startup_stm32f10x_md.o(.text) refers to system_stm32f10x.o(i.SystemInit) for SystemInit
+    startup_stm32f10x_md.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system_stm32f10x.o(i.SetSysClock) refers to system_stm32f10x.o(i.SetSysClockTo72) for SetSysClockTo72
+    system_stm32f10x.o(i.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data) for SystemCoreClock
+    system_stm32f10x.o(i.SystemInit) refers to system_stm32f10x.o(i.SetSysClock) for SetSysClock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000F) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$00000011) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry12b.o(.ARM.Collect$$$$0000000E) for __rt_lib_shutdown_fini
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to principal.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to principal.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
