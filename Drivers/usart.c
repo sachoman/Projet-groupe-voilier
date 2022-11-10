@@ -5,6 +5,7 @@
 
 
 static char Data;
+int usart_index;
 void (* usart_ptr) (void);
 //registre USART1 Rx= PA10
 //Usart1 TX = PA9
@@ -40,7 +41,11 @@ void usart_1_send(char data){
     USART1->DR |= data; // Ecriture de la donnée dans DR
     while(!(USART1->SR & USART_SR_TXE)) {} // Attente si data register empty
 }
-
+void usart_1_send_string(char * ptr_data, int length){
+	for (usart_index = 0; usart_index < length; usart_index++){
+		usart_1_send(*(ptr_data+usart_index));
+	}
+}
 void USART1_IRQHandler(void){
 	Data=USART1->DR;
 	usart_ptr();
