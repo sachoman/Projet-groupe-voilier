@@ -4,5 +4,5 @@
 
 void initGestionVoile(void);
 int getAngle(void);
-void voileHandler(void);
+void voilegestion(void);
 #endif

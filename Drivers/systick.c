@@ -2,10 +2,10 @@
 #include "gestionVoile.h"
 #include "girouette.h"
 #include "usart.h"
-
+#include "gestion-plateau.h"
 
 int compteursystick = 0;
-
+void (* handler_systick_ptr) (void);
 
 void systick_Init(int periode){
 	SysTick->CTRL |= SysTick_CTRL_ENABLE;
@@ -15,13 +15,10 @@ void systick_Init(int periode){
 	NVIC_EnableIRQ(SysTick_IRQn);
 	NVIC_SetPriority(SysTick_IRQn, 8);
 }
+void Systick_ActiveIT(void (*IT_function) (void)){
+	handler_systick_ptr = IT_function;
+}
 
 void SysTick_Handler (void){
-	if (compteursystick % 5 == 0){
-		voileHandler();
-		USART1_handler_reception_systick();
-		USART1_handler_envoi_systick();
-	}
-	
-	compteursystick++;
+	handler_systick_ptr();
 }

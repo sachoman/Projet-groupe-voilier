@@ -27,7 +27,7 @@ int getAngle(void){
 }
 
 
-void voileHandler(void){
+void voilegestion(void){
 	currentVoileAngle = getAngle();
 	if ((currentVoileAngle< 45) || (currentVoileAngle > 315)){
 		Cycle_PWM (Servo_Timer, 500 , Servo_tim_channel);

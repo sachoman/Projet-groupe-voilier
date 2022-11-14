@@ -11,3 +11,4 @@
 .\objects\systick.o: ..\Drivers\girouette.h
 .\objects\systick.o: ..\Drivers\Timer.h
 .\objects\systick.o: ..\Drivers\usart.h
+.\objects\systick.o: ..\Services\gestion-plateau.h

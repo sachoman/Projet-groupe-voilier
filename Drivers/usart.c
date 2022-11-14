@@ -47,22 +47,17 @@ void usart_1_send_string(char * ptr_data, int length){
 	}
 }
 
-/*
+
 void USART1_IRQHandler(void){
 	Data=USART1->DR;
-	usart_ptr();
 }
-*/
+
 
 void USART1_handler_reception_systick(void){
 	Data=USART1->DR;
 	usart_ptr();
 }
 
-void USART1_handler_envoi_systick(void){
-	Data=USART1->DR;
-	usart_ptr();
-}
 char usart_getValue(void)
 {
 	return Data;
@@ -70,10 +65,8 @@ char usart_getValue(void)
 
 void usart_1_configure_IT(void (*fun) (void), char prio){
 	USART1->CR1 |= USART_CR1_RXNEIE;
-	/*
 	NVIC_EnableIRQ(USART1_IRQn);
 	NVIC_SetPriority(USART1_IRQn, prio);
-	*/
 	usart_ptr = fun;
 }
 

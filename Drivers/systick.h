@@ -6,5 +6,5 @@
 
 void systick_Init(int periode);
 void SysTick_Handler (void);
-
+void Systick_ActiveIT (void (*fun) (void));
 #endif
