@@ -12,4 +12,6 @@ void usart_1_send(char data);
 void usart_1_send_string(char * ptr_data, int length);
 void usart_1_configure_IT(void (*fun) (void), char prio);
 char usart_getValue(void);
+void USART1_handler_reception_systick (void);
+void USART1_handler_envoi_systick (void);
 #endif

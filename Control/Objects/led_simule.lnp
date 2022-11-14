@@ -5,6 +5,7 @@
 ".\objects\girouette.o"
 ".\objects\timer.o"
 ".\objects\usart.o"
+".\objects\systick.o"
 ".\objects\gestion-plateau.o"
 ".\objects\mesure-roulis.o"
 ".\objects\pilotage-servomoteur.o"

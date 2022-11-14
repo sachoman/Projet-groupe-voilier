@@ -19,9 +19,14 @@ int VoileCyclePwm;
 	MyGPIO_Struct_TypeDef  MyGPIOA7;
 	MyGPIO_Struct_TypeDef  MyGPIOC8;
 	int currentVoileAngle;
+	
+	
+	
 int getAngle(void){
 	return TIM3->CNT/4;
 }
+
+
 void voileHandler(void){
 	currentVoileAngle = getAngle();
 	if ((currentVoileAngle< 45) || (currentVoileAngle > 315)){
@@ -60,7 +65,9 @@ void initGestionVoile(void){
 	MyGPIOC8.GPIO_Conf = In_Floating;
 	MyGPIO_Init(&MyGPIOC8);
 	girouette_init(Voile_MonTimer1);
+	/*
 	MyTimer_ActiveIT(&Rot_Struct_TIM, 2, voileHandler);
+	*/
 	
 }
 

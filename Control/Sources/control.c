@@ -8,11 +8,15 @@
 #include "gestion-plateau.h"
 #include "usart.h"
 #include "gestionVoile.h"
+#include "systick.h"
+
 
 int main(void){
 	initGestionPlateau();
 	initGestionVoile();
 	initServo();
+	usart_1_send('1');
+	systick_Init(20);
 	while(1){
 	}
 }
