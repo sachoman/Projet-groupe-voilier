@@ -1,0 +1,98 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: CSN CSN, INSA de Toulouse, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.34.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DARMSTM.DLL V1.68.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
+Dialog DLL:      TARMSTM.DLL V1.66.0.0
+ 
+<h2>Project:</h2>
+U:\Windows\Bureau\Projet-groupe-voilier\Services\Usart-dev\usart-dev.uvprojx
+Project File Date:  10/28/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Reel'
+Note: source file '..\..\Drivers\Timer.c' - object file renamed from '.\Objects\Timer.o' to '.\Objects\timer_1.o'.
+assembling startup_stm32f10x_md.s...
+compiling usart.c...
+..\..\Drivers\usart.h(6): warning:  #1295-D: Deprecated declaration configure_usart1_9600bps - give arg types
+  void configure_usart1_9600bps();
+..\..\Drivers\usart.c: 1 warning, 0 errors
+compiling system_stm32f10x.c...
+compiling Driver_GPIO.c...
+compiling Timer.c...
+compiling Timer.c...
+compiling principal.c...
+..\..\Drivers\usart.h(6): warning:  #1295-D: Deprecated declaration configure_usart1_9600bps - give arg types
+  void configure_usart1_9600bps();
+Sources\principal.c: 1 warning, 0 errors
+linking...
+.\Objects\led_reel.axf: Error: L6200E: Symbol __asm___7_Timer_c_21c6ffdc____REV16 multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol __asm___7_Timer_c_21c6ffdc____REVSH multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol __asm___7_Timer_c_21c6ffdc____RRX multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol ptr1 multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol ptr2 multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol ptr3 multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol ptr4 multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol Cycle_PWM multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol MyTimer_ActiveIT multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol MyTimer_Base_Init multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol MyTimer_PWM multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol TIM1_UP_IRQHandler multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol TIM2_IRQHandler multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol TIM3_IRQHandler multiply defined (by timer_1.o and timer.o).
+.\Objects\led_reel.axf: Error: L6200E: Symbol TIM4_IRQHandler multiply defined (by timer_1.o and timer.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 15 error messages.
+".\Objects\led_reel.axf" - 15 Error(s), 2 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103RB
+  .\RTE\_Reel
+  C:\Programdata\Keil\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Programdata\Keil\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\system_stm32f10x.c
+Target not created.
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

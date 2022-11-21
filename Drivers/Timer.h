@@ -30,5 +30,5 @@ void MyTimer_ActiveIT ( MyTimer_Struct_TypeDef * Timer , char Prio, void (*IT_fu
 * n i l e r é g l a g e de l a pé r i o d e de l a PWM (ARR , PSC )
 */
 void MyTimer_PWM( TIM_TypeDef * Timer , char Channel ) ;
-void Cycle_PWM(TIM_TypeDef * Timer, int alpha, char channel); 
+void Cycle_PWM(TIM_TypeDef * Timer, int alpha, char channel); //alpha en pour 10 000 au lieu de poour 100
 #endif

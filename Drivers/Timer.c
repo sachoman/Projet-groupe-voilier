@@ -5,6 +5,7 @@ void (*ptr1) (void);
 void (*ptr2) (void);
 void (*ptr3) (void);
 void (*ptr4) (void);
+int Tim_cycle_pwm;
 
 void MyTimer_Base_Init ( MyTimer_Struct_TypeDef * Timer ){
 	if ( Timer->Timer == TIM1){
@@ -95,16 +96,17 @@ void MyTimer_PWM( TIM_TypeDef * Timer , char Channel ){
 }
 
 void Cycle_PWM(TIM_TypeDef * Timer, int alpha, char channel){
+	Tim_cycle_pwm = (alpha*Timer->ARR)/10000;
 	if (channel == 1){
-	Timer->CCR1=((int)alpha*Timer->ARR)/100;
+	Timer->CCR1=Tim_cycle_pwm;
 	}
 	else if (channel ==2){
-		Timer->CCR2=((int)alpha*Timer->ARR)/100;
+		Timer->CCR2=Tim_cycle_pwm;
 	}
 	else if (channel == 3){
-		Timer->CCR3=((int)alpha*Timer->ARR)/100;
+		Timer->CCR3=Tim_cycle_pwm;
 	}
 	else if (channel == 4){
-		Timer->CCR4=((int)alpha*Timer->ARR)/100;
+		Timer->CCR4=Tim_cycle_pwm;
 	}
 }
