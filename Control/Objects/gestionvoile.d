@@ -15,3 +15,6 @@
 .\objects\gestionvoile.o: ..\Services\gestion-plateau.h
 .\objects\gestionvoile.o: ..\Services\rotation-plateau.h
 .\objects\gestionvoile.o: ..\Services\gestionVoile.h
+.\objects\gestionvoile.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\gestionvoile.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\gestionvoile.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

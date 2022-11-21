@@ -20,3 +20,4 @@
 .\objects\control.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\control.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\control.o: ..\Services\accelero.h
+.\objects\control.o: ..\Services\batterie.h

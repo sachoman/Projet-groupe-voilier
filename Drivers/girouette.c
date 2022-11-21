@@ -8,7 +8,7 @@ void girouette_init(MyTimer_Struct_TypeDef MonTimer1){
 	EXTI->IMR |= EXTI_IMR_MR8;
 	EXTI->EMR |= EXTI_EMR_MR8;
 	EXTI->FTSR |= EXTI_FTSR_TR8;
-	NVIC_SetPriority(EXTI9_5_IRQn,4);
+	NVIC_SetPriority(EXTI9_5_IRQn,3);
 	NVIC_EnableIRQ(EXTI9_5_IRQn);	
 	
 	MyTimer_Base_Init(&MonTimer1);

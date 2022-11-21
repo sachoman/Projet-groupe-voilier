@@ -9,6 +9,9 @@
 #include "rotation-plateau.h"
 #include "usart.h"
 #include "gestionVoile.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "string.h"
 
 extern MyTimer_Struct_TypeDef Servo_Struct_TIM;
 extern MyTimer_Struct_TypeDef Rot_Struct_TIM;
@@ -77,7 +80,7 @@ char* VoileGetAllure (void) {
 		allure = "Vent de face";
 	}
 	else if ((currentVoileAngle< 45) || (currentVoileAngle > 315)){
-		allure = "Vent de Près";
+		allure = "Vent de Pres";
 	}
 	else if ((currentVoileAngle< 60) || (currentVoileAngle > 300)){
 		allure = "Bon Plein";
@@ -92,10 +95,23 @@ char* VoileGetAllure (void) {
 		allure = "Grand Largue";
 	}
 	else if((currentVoileAngle< 180) || (currentVoileAngle > 180)){
-		allure = "Vent arrière";
+		allure = "Vent arriere";
 	}
 	return allure;
 }
 
-
+void affichage_allure_angle(void) {
+	char anglevoilier1[] = "\nL'angle du voilier est de ";
+		char anglevoilier2[10];
+		char allurevoilier1[] = "\nL'allure du voilier est : ";
+		char* allurevoilier2;
+		char* infovoilier;
+		sprintf(anglevoilier2,"%d",getAngle());
+		infovoilier = strcat(anglevoilier1,anglevoilier2);
+		usart_1_send_string(infovoilier,strlen(infovoilier));
+		// on a l'angle on essaie de récupérer l'allure ! 
+		allurevoilier2 = VoileGetAllure();
+		infovoilier = strcat(allurevoilier1,allurevoilier2);
+		usart_1_send_string(infovoilier,strlen(infovoilier));
+}
 

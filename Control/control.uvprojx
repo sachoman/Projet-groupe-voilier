@@ -528,6 +528,16 @@
               <FileType>5</FileType>
               <FilePath>..\Services\accelero.h</FilePath>
             </File>
+            <File>
+              <FileName>batterie.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\batterie.c</FilePath>
+            </File>
+            <File>
+              <FileName>batterie.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\batterie.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1079,6 +1089,16 @@
               <FileName>accelero.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Services\accelero.h</FilePath>
+            </File>
+            <File>
+              <FileName>batterie.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\batterie.c</FilePath>
+            </File>
+            <File>
+              <FileName>batterie.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\batterie.h</FilePath>
             </File>
           </Files>
         </Group>
