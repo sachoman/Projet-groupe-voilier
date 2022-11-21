@@ -27,10 +27,10 @@ int main(void){
 	initGestionVoile();
 	initServo();
 	init_batterie();
-
 	
 	while(1){
 	}
+	
 }
 
 void systick_fun (void){
@@ -40,7 +40,7 @@ void systick_fun (void){
 		
 	}
 	if (compteursystick % 150 == 0){
-		// 3s 
+		//3s 
 		affichage_allure_angle();
 		check_batterie();
 
