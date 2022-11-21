@@ -518,6 +518,36 @@
               <FileType>1</FileType>
               <FilePath>..\Services\envoi-donnes.c</FilePath>
             </File>
+            <File>
+              <FileName>accelero.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\accelero.c</FilePath>
+            </File>
+            <File>
+              <FileName>accelero.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\accelero.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Lib_spi</GroupName>
+          <Files>
+            <File>
+              <FileName>Lib_Com_Periph_2022.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\Lib_Com_Periph_2022\Lib_Com_Periph_2022.lib</FilePath>
+            </File>
+            <File>
+              <FileName>MyI2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Lib_Com_Periph_2022\MyI2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>MySPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Lib_Com_Periph_2022\MySPI.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1039,6 +1069,36 @@
               <FileName>envoi-donnes.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Services\envoi-donnes.c</FilePath>
+            </File>
+            <File>
+              <FileName>accelero.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\accelero.c</FilePath>
+            </File>
+            <File>
+              <FileName>accelero.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\accelero.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Lib_spi</GroupName>
+          <Files>
+            <File>
+              <FileName>Lib_Com_Periph_2022.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\Lib_Com_Periph_2022\Lib_Com_Periph_2022.lib</FilePath>
+            </File>
+            <File>
+              <FileName>MyI2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Lib_Com_Periph_2022\MyI2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>MySPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Lib_Com_Periph_2022\MySPI.h</FilePath>
             </File>
           </Files>
         </Group>

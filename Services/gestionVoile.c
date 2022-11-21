@@ -71,5 +71,31 @@ void initGestionVoile(void){
 	
 }
 
+char* VoileGetAllure (void) {
+	char* allure;
+	if ((currentVoileAngle< 40) || (currentVoileAngle > 320)){
+		allure = "Vent de face";
+	}
+	else if ((currentVoileAngle< 45) || (currentVoileAngle > 315)){
+		allure = "Vent de Près";
+	}
+	else if ((currentVoileAngle< 60) || (currentVoileAngle > 300)){
+		allure = "Bon Plein";
+	}
+	else if ((currentVoileAngle< 90) || (currentVoileAngle > 270)){
+		allure = "Petit Largue";
+	}
+	else if ((currentVoileAngle< 115) || (currentVoileAngle > 245)){
+		allure = "Largue";
+	}
+	else if ((currentVoileAngle< 160) || (currentVoileAngle > 200)){
+		allure = "Grand Largue";
+	}
+	else if((currentVoileAngle< 180) || (currentVoileAngle > 180)){
+		allure = "Vent arrière";
+	}
+	return allure;
+}
+
 
 

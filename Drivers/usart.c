@@ -52,12 +52,6 @@ void USART1_IRQHandler(void){
 	Data=USART1->DR;
 }
 
-
-void USART1_handler_reception_systick(void){
-	Data=USART1->DR;
-	usart_ptr();
-}
-
 char usart_getValue(void)
 {
 	return Data;

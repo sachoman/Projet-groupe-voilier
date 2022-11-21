@@ -5,4 +5,5 @@
 void initGestionVoile(void);
 int getAngle(void);
 void voilegestion(void);
+char* VoileGetAllure(void);
 #endif

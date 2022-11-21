@@ -13,7 +13,7 @@ void systick_Init(int periode){
 	SysTick->CTRL |= SysTick_CTRL_CLKSOURCE;
 	SysTick->LOAD |=  (72000000/(1000/periode) - 1);
 	NVIC_EnableIRQ(SysTick_IRQn);
-	NVIC_SetPriority(SysTick_IRQn, 8);
+	NVIC_SetPriority(SysTick_IRQn, 3);
 }
 void Systick_ActiveIT(void (*IT_function) (void)){
 	handler_systick_ptr = IT_function;
