@@ -1,0 +1,224 @@
+Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
+
+==============================================================================
+
+Section Cross References
+
+    spi.o(i.check_roulis) refers to spi.o(i.lecture_data_accelero) for lecture_data_accelero
+    spi.o(i.check_roulis) refers to spi.o(i.convert) for convert
+    spi.o(i.check_roulis) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    spi.o(i.check_roulis) refers to timer.o(i.Cycle_PWM) for Cycle_PWM
+    spi.o(i.check_roulis) refers to spi.o(.data) for gy
+    spi.o(i.convert) refers to dflti.o(.text) for __aeabi_i2d
+    spi.o(i.convert) refers to dmul.o(.text) for __aeabi_dmul
+    spi.o(i.convert) refers to spi.o(.data) for datax1
+    spi.o(i.lecture_data_accelero) refers to myspi.o(i.MySPI_Clear_NSS) for MySPI_Clear_NSS
+    spi.o(i.lecture_data_accelero) refers to myspi.o(i.MySPI_Send) for MySPI_Send
+    spi.o(i.lecture_data_accelero) refers to myspi.o(i.MySPI_Read) for MySPI_Read
+    spi.o(i.lecture_data_accelero) refers to myspi.o(i.MySPI_Set_NSS) for MySPI_Set_NSS
+    spi.o(i.lecture_data_accelero) refers to spi.o(.data) for spi_byte
+    spi.o(i.spi_accelero_init) refers to myspi.o(i.MySPI_Init) for MySPI_Init
+    spi.o(i.spi_accelero_init) refers to myspi.o(i.MySPI_Set_NSS) for MySPI_Set_NSS
+    spi.o(i.spi_accelero_init) refers to myspi.o(i.MySPI_Clear_NSS) for MySPI_Clear_NSS
+    spi.o(i.spi_accelero_init) refers to myspi.o(i.MySPI_Send) for MySPI_Send
+    spi.o(i.spi_accelero_init) refers to spi.o(.data) for spi_byte
+    adc.o(i.ADC1_2_IRQHandler) refers to adc.o(.data) for valeur_ADC
+    adc.o(i.get_adcValue) refers to adc.o(.data) for valeur_ADC
+    driver_gpio.o(i.MyGPIO_Init) refers to driver_gpio.o(i.MyGPIO_Reset) for MyGPIO_Reset
+    driver_gpio.o(i.MyGPIO_Init) refers to driver_gpio.o(i.MyGPIO_Set) for MyGPIO_Set
+    driver_gpio.o(i.MyGPIO_Init) refers to driver_gpio.o(.data) for regcr
+    girouette.o(i.girouette_init) refers to timer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
+    timer.o(i.Cycle_PWM) refers to timer.o(.data) for Tim_cycle_pwm
+    timer.o(i.MyTimer_ActiveIT) refers to timer.o(i.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    timer.o(i.MyTimer_ActiveIT) refers to timer.o(i.__NVIC_SetPriority) for __NVIC_SetPriority
+    timer.o(i.MyTimer_ActiveIT) refers to timer.o(.data) for ptr2
+    timer.o(i.TIM1_UP_IRQHandler) refers to timer.o(.data) for ptr1
+    timer.o(i.TIM2_IRQHandler) refers to timer.o(.data) for ptr2
+    timer.o(i.TIM3_IRQHandler) refers to timer.o(.data) for ptr3
+    timer.o(i.TIM4_IRQHandler) refers to timer.o(.data) for ptr4
+    usart.o(i.USART1_IRQHandler) refers to usart.o(.data) for Data
+    usart.o(i.usart_1_configure_IT) refers to usart.o(.data) for usart_ptr
+    usart.o(i.usart_1_send_string) refers to usart.o(i.usart_1_send) for usart_1_send
+    usart.o(i.usart_1_send_string) refers to usart.o(.data) for usart_index
+    usart.o(i.usart_configure_1_9600bps) refers to driver_gpio.o(i.MyGPIO_Init) for MyGPIO_Init
+    usart.o(i.usart_configure_1_9600bps) refers to usart.o(.data) for Usart_gpio_tx
+    usart.o(i.usart_getValue) refers to usart.o(.data) for Data
+    gestion-plateau.o(i.initGestionPlateau) refers to usart.o(i.usart_configure_1_9600bps) for usart_configure_1_9600bps
+    gestion-plateau.o(i.initGestionPlateau) refers to usart.o(i.usart_1_configure_IT) for usart_1_configure_IT
+    gestion-plateau.o(i.initGestionPlateau) refers to rotation-plateau.o(i.initPlateau) for initPlateau
+    gestion-plateau.o(i.initGestionPlateau) refers to gestion-plateau.o(i.receptionDonnees) for receptionDonnees
+    gestion-plateau.o(i.receptionDonnees) refers to usart.o(i.usart_getValue) for usart_getValue
+    gestion-plateau.o(i.receptionDonnees) refers to rotation-plateau.o(i.tourneDroite) for tourneDroite
+    gestion-plateau.o(i.receptionDonnees) refers to rotation-plateau.o(i.tourneGauche) for tourneGauche
+    gestion-plateau.o(i.receptionDonnees) refers to gestion-plateau.o(.data) for g_p_c
+    pilotage-servomoteur.o(i.initServo) refers to driver_gpio.o(i.MyGPIO_Init) for MyGPIO_Init
+    pilotage-servomoteur.o(i.initServo) refers to timer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
+    pilotage-servomoteur.o(i.initServo) refers to timer.o(i.MyTimer_PWM) for MyTimer_PWM
+    pilotage-servomoteur.o(i.initServo) refers to timer.o(i.Cycle_PWM) for Cycle_PWM
+    pilotage-servomoteur.o(i.initServo) refers to pilotage-servomoteur.o(.data) for Servo_Struct_Gpio_PWM
+    rotation-plateau.o(i.initPlateau) refers to driver_gpio.o(i.MyGPIO_Init) for MyGPIO_Init
+    rotation-plateau.o(i.initPlateau) refers to timer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
+    rotation-plateau.o(i.initPlateau) refers to timer.o(i.MyTimer_PWM) for MyTimer_PWM
+    rotation-plateau.o(i.initPlateau) refers to timer.o(i.Cycle_PWM) for Cycle_PWM
+    rotation-plateau.o(i.initPlateau) refers to rotation-plateau.o(.data) for Rot_Struct_Gpio_PWM
+    rotation-plateau.o(i.tourneDroite) refers to timer.o(i.Cycle_PWM) for Cycle_PWM
+    rotation-plateau.o(i.tourneGauche) refers to timer.o(i.Cycle_PWM) for Cycle_PWM
+    gestionvoile.o(i.initGestionVoile) refers to driver_gpio.o(i.MyGPIO_Init) for MyGPIO_Init
+    gestionvoile.o(i.initGestionVoile) refers to girouette.o(i.girouette_init) for girouette_init
+    gestionvoile.o(i.initGestionVoile) refers to timer.o(i.MyTimer_ActiveIT) for MyTimer_ActiveIT
+    gestionvoile.o(i.initGestionVoile) refers to gestionvoile.o(.data) for Voile_MonTimer1
+    gestionvoile.o(i.initGestionVoile) refers to gestionvoile.o(i.voileHandler) for voileHandler
+    gestionvoile.o(i.initGestionVoile) refers to rotation-plateau.o(.data) for Rot_Struct_TIM
+    gestionvoile.o(i.voileHandler) refers to gestionvoile.o(i.getAngle) for getAngle
+    gestionvoile.o(i.voileHandler) refers to timer.o(i.Cycle_PWM) for Cycle_PWM
+    gestionvoile.o(i.voileHandler) refers to gestionvoile.o(.data) for currentVoileAngle
+    envoi-donnes.o(i.envoi_angle) refers to usart.o(i.usart_1_send_string) for usart_1_send_string
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
+    startup_stm32f10x_md.o(RESET) refers to adc.o(i.ADC1_2_IRQHandler) for ADC1_2_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to girouette.o(i.EXTI9_5_IRQHandler) for EXTI9_5_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to timer.o(i.TIM1_UP_IRQHandler) for TIM1_UP_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to timer.o(i.TIM2_IRQHandler) for TIM2_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to timer.o(i.TIM3_IRQHandler) for TIM3_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to timer.o(i.TIM4_IRQHandler) for TIM4_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to usart.o(i.USART1_IRQHandler) for USART1_IRQHandler
+    startup_stm32f10x_md.o(.text) refers to system_stm32f10x.o(i.SystemInit) for SystemInit
+    startup_stm32f10x_md.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system_stm32f10x.o(i.SetSysClock) refers to system_stm32f10x.o(i.SetSysClockTo72) for SetSysClockTo72
+    system_stm32f10x.o(i.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data) for SystemCoreClock
+    system_stm32f10x.o(i.SystemInit) refers to system_stm32f10x.o(i.SetSysClock) for SetSysClock
+    myspi.o(i.MySPI_Clear_NSS) refers to myspi.o(.data) for ActiveSPI
+    myspi.o(i.MySPI_Init) refers to myspi.o(i.MySPI_Set_NSS) for MySPI_Set_NSS
+    myspi.o(i.MySPI_Init) refers to myspi.o(.data) for ActiveSPI
+    myspi.o(i.MySPI_Read) refers to myspi.o(.data) for ActiveSPI
+    myspi.o(i.MySPI_Send) refers to myspi.o(.data) for ActiveSPI
+    myspi.o(i.MySPI_Set_NSS) refers to myspi.o(.data) for ActiveSPI
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000F) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$00000011) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry12b.o(.ARM.Collect$$$$0000000E) for __rt_lib_shutdown_fini
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    cdrcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing spi.o(.rev16_text), (4 bytes).
+    Removing spi.o(.revsh_text), (4 bytes).
+    Removing spi.o(.rrx_text), (6 bytes).
+    Removing spi.o(i.check_roulis), (52 bytes).
+    Removing spi.o(i.convert), (188 bytes).
+    Removing spi.o(i.lecture_data_accelero), (104 bytes).
+    Removing spi.o(i.spi_accelero_init), (180 bytes).
+    Removing spi.o(.data), (49 bytes).
+    Removing adc.o(.rev16_text), (4 bytes).
+    Removing adc.o(.revsh_text), (4 bytes).
+    Removing adc.o(.rrx_text), (6 bytes).
+    Removing adc.o(i.ADC_Read), (12 bytes).
+    Removing adc.o(i.ADC_init_single), (192 bytes).
+    Removing adc.o(i.ADC_off), (14 bytes).
+    Removing adc.o(i.ADC_on), (14 bytes).
+    Removing adc.o(i.get_adcValue), (12 bytes).
+    Removing driver_gpio.o(.rev16_text), (4 bytes).
+    Removing driver_gpio.o(.revsh_text), (4 bytes).
+    Removing driver_gpio.o(.rrx_text), (6 bytes).
+    Removing driver_gpio.o(i.MyGPIO_Init), (272 bytes).
+    Removing driver_gpio.o(i.MyGPIO_Read), (12 bytes).
+    Removing driver_gpio.o(i.MyGPIO_Reset), (12 bytes).
+    Removing driver_gpio.o(i.MyGPIO_Set), (12 bytes).
+    Removing driver_gpio.o(i.MyGPIO_Toggle), (12 bytes).
+    Removing driver_gpio.o(.data), (4 bytes).
+    Removing girouette.o(.rev16_text), (4 bytes).
+    Removing girouette.o(.revsh_text), (4 bytes).
+    Removing girouette.o(.rrx_text), (6 bytes).
+    Removing girouette.o(i.girouette_init), (300 bytes).
+    Removing timer.o(.rev16_text), (4 bytes).
+    Removing timer.o(.revsh_text), (4 bytes).
+    Removing timer.o(.rrx_text), (6 bytes).
+    Removing timer.o(i.Cycle_PWM), (72 bytes).
+    Removing timer.o(i.MyTimer_ActiveIT), (160 bytes).
+    Removing timer.o(i.MyTimer_Base_Init), (124 bytes).
+    Removing timer.o(i.MyTimer_PWM), (120 bytes).
+    Removing timer.o(i.__NVIC_EnableIRQ), (34 bytes).
+    Removing timer.o(i.__NVIC_SetPriority), (40 bytes).
+    Removing usart.o(.rev16_text), (4 bytes).
+    Removing usart.o(.revsh_text), (4 bytes).
+    Removing usart.o(.rrx_text), (6 bytes).
+    Removing usart.o(i.usart_1_configure_IT), (112 bytes).
+    Removing usart.o(i.usart_1_send), (32 bytes).
+    Removing usart.o(i.usart_1_send_string), (48 bytes).
+    Removing usart.o(i.usart_configure_1_9600bps), (156 bytes).
+    Removing usart.o(i.usart_getValue), (12 bytes).
+    Removing usart.o(.bss), (10 bytes).
+    Removing gestion-plateau.o(.rev16_text), (4 bytes).
+    Removing gestion-plateau.o(.revsh_text), (4 bytes).
+    Removing gestion-plateau.o(.rrx_text), (6 bytes).
+    Removing gestion-plateau.o(i.initGestionPlateau), (24 bytes).
+    Removing gestion-plateau.o(i.receptionDonnees), (64 bytes).
+    Removing gestion-plateau.o(.data), (8 bytes).
+    Removing mesure-roulis.o(.rev16_text), (4 bytes).
+    Removing mesure-roulis.o(.revsh_text), (4 bytes).
+    Removing mesure-roulis.o(.rrx_text), (6 bytes).
+    Removing mesure-roulis.o(i.initMesureRoulis), (2 bytes).
+    Removing mesure-roulis.o(i.setupADXL345), (2 bytes).
+    Removing pilotage-servomoteur.o(.rev16_text), (4 bytes).
+    Removing pilotage-servomoteur.o(.revsh_text), (4 bytes).
+    Removing pilotage-servomoteur.o(.rrx_text), (6 bytes).
+    Removing pilotage-servomoteur.o(i.initServo), (96 bytes).
+    Removing pilotage-servomoteur.o(.data), (16 bytes).
+    Removing rotation-plateau.o(.rev16_text), (4 bytes).
+    Removing rotation-plateau.o(.revsh_text), (4 bytes).
+    Removing rotation-plateau.o(.rrx_text), (6 bytes).
+    Removing rotation-plateau.o(i.initPlateau), (124 bytes).
+    Removing rotation-plateau.o(i.tourneDroite), (36 bytes).
+    Removing rotation-plateau.o(i.tourneGauche), (36 bytes).
+    Removing rotation-plateau.o(.data), (24 bytes).
+    Removing gestionvoile.o(.rev16_text), (4 bytes).
+    Removing gestionvoile.o(.revsh_text), (4 bytes).
+    Removing gestionvoile.o(.rrx_text), (6 bytes).
+    Removing gestionvoile.o(i.getAngle), (20 bytes).
+    Removing gestionvoile.o(i.initGestionVoile), (136 bytes).
+    Removing gestionvoile.o(i.voileHandler), (124 bytes).
+    Removing gestionvoile.o(.data), (40 bytes).
+    Removing envoi-donnes.o(.rev16_text), (4 bytes).
+    Removing envoi-donnes.o(.revsh_text), (4 bytes).
+    Removing envoi-donnes.o(.rrx_text), (6 bytes).
+    Removing envoi-donnes.o(i.envoi_angle), (24 bytes).
+    Removing startup_stm32f10x_md.o(HEAP), (512 bytes).
+    Removing system_stm32f10x.o(.rev16_text), (4 bytes).
+    Removing system_stm32f10x.o(.revsh_text), (4 bytes).
+    Removing system_stm32f10x.o(.rrx_text), (6 bytes).
+    Removing system_stm32f10x.o(i.SystemCoreClockUpdate), (164 bytes).
+    Removing system_stm32f10x.o(.data), (20 bytes).
+    Removing myspi.o(.rev16_text), (4 bytes).
+    Removing myspi.o(.revsh_text), (4 bytes).
+    Removing myspi.o(.rrx_text), (6 bytes).
+    Removing myspi.o(i.MySPI_Clear_NSS), (48 bytes).
+    Removing myspi.o(i.MySPI_Init), (500 bytes).
+    Removing myspi.o(i.MySPI_Read), (84 bytes).
+    Removing myspi.o(i.MySPI_Send), (80 bytes).
+    Removing myspi.o(i.MySPI_Set_NSS), (44 bytes).
+    Removing myspi.o(.data), (4 bytes).
+    Removing dmul.o(.text), (228 bytes).
+    Removing dflti.o(.text), (34 bytes).
+    Removing cdrcmple.o(.text), (48 bytes).
+    Removing depilogue.o(.text), (186 bytes).
+
+100 unused section(s) (total 5285 bytes) removed from the image.
